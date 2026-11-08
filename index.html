@@ -41,7 +41,7 @@ h2{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:800;margin-bottom:.5rem}
 .edu{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.1rem}
 .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.2rem 1.3rem}
 .box strong{display:block;font-size:1.1rem}.box span{color:var(--mute);font-size:.95rem;display:block}
-.box small{display:block;margin-top:.6rem;color:var(--mute)}.box p{margin:.7rem 0 0;font-size:.98rem;max-width:none}
+.box small{display:block;margin-top:.6rem;color:var(--mute)}.box p{margin:.7rem 0 0;font-size:.98rem;max-width:none}.empty{margin:.2rem 0 0;font-size:2rem;line-height:1;color:var(--mute)}
 .head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
 .arrows{display:flex;gap:.5rem;margin-bottom:1.2rem}
 .arrows button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:none;cursor:pointer;font-size:1.2rem}
@@ -111,12 +111,8 @@ dialog::backdrop{background:rgba(10,15,30,.62)}
 </section>
 
 <section class="wrap" id="sertifikat">
-  <div class="head"><div><h2>Sertifikat</h2><p class="sub">Klik kartu untuk melihat detail sertifikat.</p></div><div class="arrows"><button aria-label="Sebelumnya" data-t="t2" data-d="-1">←</button><button aria-label="Berikutnya" data-t="t2" data-d="1">→</button></div></div>
-  <div class="track" id="t2">
-    <button class="card" data-k="c1"><div class="art" style="--c:var(--sky);--i:var(--sky-i)"><div class="cert"><i></i><span></span><span></span></div></div><div class="cb"><h3>LKMM Pra-TD</h3><span>11 Okt 2025</span><em>Lihat detail</em></div></button>
-    <button class="card" data-k="c2"><div class="art" style="--c:var(--rose);--i:var(--rose-i)"><div class="cert"><i></i><span></span><span></span></div></div><div class="cb"><h3>ASTRO Mahasiswa Baru TI</h3><span>13 Sep 2025</span><em>Lihat detail</em></div></button>
-    <button class="card" data-k="c3"><div class="art" style="--c:var(--sage);--i:var(--sage-i)"><div class="cert"><i></i><span></span><span></span></div></div><div class="cb"><h3>PKKMB Politeknik Negeri Jember</h3><span>11 – 15 Agu 2025</span><em>Lihat detail</em></div></button>
-  </div>
+  <div class="head"><div><h2>Sertifikat</h2><p class="sub"></p></div></div>
+  <p class="empty">–</p>
 </section>
 
 <section class="wrap" id="skill">
@@ -147,9 +143,7 @@ var D={
 rb:{t:"Royal Bloom / Royal Florist",m:"Web & Mobile Developer, Sep 2026 – sekarang (Project Based Learning)",d:["Mengembangkan sistem toko bunga yang terdiri dari aplikasi web dan aplikasi mobile dalam satu kesatuan.","Membangun fitur katalog bunga, pemesanan, dan pengelolaan data yang dapat diakses lewat web maupun mobile.","Menghubungkan web dan mobile ke database yang sama agar data selalu sinkron.","Merancang tampilan responsif dan konsisten di kedua platform, serta menguji fungsi sebelum digunakan."],c:["Web","Mobile","Database","Responsif"],a:'<div class="art" style="--c:var(--rose);--i:var(--rose-i)"><div class="win"><b></b><p><span></span><em></em></p><p><span></span><em></em></p><p><span></span><em></em></p></div><div class="ph"><u></u><u></u><u></u></div></div>'},
 mm:{t:"Aplikasi Toko Pertanian Mbah Met",m:"Software Developer, Feb – Jun 2026 (Project Based Learning)",d:["Menganalisis kebutuhan toko untuk pengelolaan data produk, stok, dan transaksi penjualan.","Merancang antarmuka dan alur aplikasi agar mudah digunakan oleh pemilik toko.","Membangun aplikasi dengan fitur pengelolaan produk, stok, dan transaksi penjualan.","Menguji aplikasi dan memperbaiki kendala sebelum diserahkan kepada pemilik toko."],c:["Produk","Stok","Transaksi","Pengujian"],a:'<div class="art" style="--c:var(--sage);--i:var(--sage-i)"><div class="win" style="width:72%"><b></b><p><span></span><em></em></p><p><span></span><em></em></p><p><span></span><em></em></p></div></div>'},
 sk:{t:"Website Salon Kusuma Cantika Collection",m:"Web Developer, Sep 2025 – Jan 2026 (Project Based Learning)",d:["Menganalisis kebutuhan pemilik salon untuk menampilkan layanan, harga, dan informasi kontak secara online.","Merancang tampilan website meliputi tata letak, warna, tipografi, gambar, dan tombol.","Membangun website menggunakan HTML, CSS, dan PHP.","Menguji fitur website agar berfungsi baik dan nyaman diakses dari berbagai perangkat."],c:["HTML","CSS","PHP","Desain tampilan"],a:'<div class="art" style="--c:var(--sun);--i:var(--sun-i)"><div class="win" style="width:72%"><b></b><p><span></span><em></em></p><p><span style="flex:.7"></span><em></em></p><p><span></span><em></em></p></div></div>'},
-c1:{t:"Latihan Keterampilan Manajemen Mahasiswa Pra Tingkat Dasar (LKMM Pra-TD)",m:"Peserta, 11 Okt 2025",d:["Penyelenggara: Himpunan Mahasiswa Jurusan Teknologi Informasi, Politeknik Negeri Jember."],c:["Kepemimpinan","Organisasi"],a:'<div class="art" style="--c:var(--sky);--i:var(--sky-i)"><div class="cert"><i></i><span></span><span></span></div></div>'},
-c2:{t:"Adaptasi, Sinergi dan Transformasi Mahasiswa Baru TI (ASTRO)",m:"Peserta, 13 Sep 2025",d:["Penyelenggara: Himpunan Mahasiswa Jurusan Teknologi Informasi, Politeknik Negeri Jember."],c:["Kegiatan mahasiswa baru"],a:'<div class="art" style="--c:var(--rose);--i:var(--rose-i)"><div class="cert"><i></i><span></span><span></span></div></div>'},
-c3:{t:"Pengenalan Kehidupan Kampus Bagi Mahasiswa Baru (PKKMB)",m:"Lulus, 11 – 15 Agu 2025",d:["Penyelenggara: Politeknik Negeri Jember."],c:["Kegiatan mahasiswa baru"],a:'<div class="art" style="--c:var(--sage);--i:var(--sage-i)"><div class="cert"><i></i><span></span><span></span></div></div>'}};
+c2:{t:"Adaptasi, Sinergi dan Transformasi Mahasiswa Baru TI (ASTRO)",m:"Peserta, 13 Sep 2025",d:["Penyelenggara: Himpunan Mahasiswa Jurusan Teknologi Informasi, Politeknik Negeri Jember."],c:["Kegiatan mahasiswa baru"],a:'<div class="art" style="--c:var(--rose);--i:var(--rose-i)"><div class="cert"><i></i><span></span><span></span></div></div>'}};
 var dlg=document.getElementById("dlg");
 document.querySelectorAll(".card").forEach(function(b){b.addEventListener("click",function(){
  var x=D[b.dataset.k];
